@@ -2,5 +2,14 @@
   "dependencies": {
     "json-server": "^0.17.1",
     "yarn": "^1.22.19"
+  },
+  "name": "Real_Trip_Advisor_DB",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": "https://github.com/sonsu0710/Real-Trip-Advisor_DB.git",
+  "author": "sonsu0710 <sonsu0710@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node server.js"
   }
 }
