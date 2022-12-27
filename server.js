@@ -5,7 +5,13 @@ const app = express();
 const port = process.env.PORT || 8080;
 const data = require('./db.json');
 
-app.get(["/", "/:id"], cors(), (req, res) => {
+// let corsOptions = {
+//     origin: 'https://real-trip-advisor-homepage.fly.dev/',
+//     credentials: true
+// }
+// app.use(cors(corsOptions));
+
+app.get(["/", "/:id"], cors({origin: 'https://real-trip-advisor-homepage.fly.dev'}), (req, res) => {
     res.send(data.data)
 });
 
