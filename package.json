@@ -12,5 +12,9 @@
   "scripts": {
     "start": "node server.js",
     "heroku-prebuild": "npm install"
+  },
+  "engines": {
+    "node": "18.12.1",
+    "npm": "9.1.2"
   }
 }
