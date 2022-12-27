@@ -1,13 +1,10 @@
-const jsonServer = require('json-server');
+const express = require("express");
+const app = express();
+const port = process.env.PORT || 8080;
+const data = require('./db.json');
 
-const server = jsonServer.create();
-const router = jsonServer.router(path.join(__dirname, 'db.json'));
-const middlewares = jsonServer.defaults();
-const port = process.env.PORT || 5000;
-
-server.use(middlewares);
-server.use(router);
-
-server.listen(port, () => {
-    console.log('JSON Server is running');
+app.get(["/", "/:name"], (req, res) => {
+    res.send(data);
 });
+
+app.listen(port, () => console.log(`HelloNode app listening on port ${port}!`));
